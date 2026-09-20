@@ -252,7 +252,6 @@
             stroke-width: 2;
         }
 
-        /* زيادة المسافات العلوية بحيث يظهر العنوان ويأخذ مساحة مريحة ويظهر أول قسم فقط بوضوح عند الفتح */
         .content-container {
             padding: 65px 20px 80px 20px;
             display: flex;
@@ -269,7 +268,7 @@
             font-weight: 900;
             letter-spacing: 2.5px;
             line-height: 1.3;
-            margin-bottom: 50px; /* مسافة أوسع وأكبر تحت الحملة للوصول لأول الأقسام */
+            margin-bottom: 50px;
             font-family: "Playfair Display", Didot, "Bodoni MT", serif;
             text-transform: uppercase;
             background: var(--curated-color);
@@ -285,7 +284,7 @@
         .categories-grid {
             display: flex;
             flex-direction: column;
-            gap: 45px; /* مسافة مريحة بين كل قسم والثاني بعد عمل Scroll */
+            gap: 45px;
             width: 100%;
         }
 
@@ -301,10 +300,9 @@
             transform: translateY(-3px);
         }
 
-        /* حاوية الصورة بأبعاد 3:4 عريضة ومستطيلة وبحجم أكبر وأوضح */
         .category-img-wrapper {
             width: 100%;
-            aspect-ratio: 4 / 3;
+            aspect-ratio: 5 / 7;
             border-radius: 14px;
             overflow: hidden;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
@@ -323,7 +321,6 @@
             transform: scale(1.03);
         }
 
-        /* حجم أكبر وواضح لاسم القسم وأتخن ليكون مقروءاً وممتازاً على شاشات الهواتف */
         .category-name {
             color: var(--cat-title-color);
             font-size: 18px;
@@ -411,58 +408,66 @@
         </h1>
         
         <div class="categories-grid">
+            <!-- 1. Kitchen -->
             <a href="category-kitchen.html" class="category-card">
                 <div class="category-img-wrapper">
-                    <img src="images/kitchen.jpg" alt="Kitchen" loading="lazy">
+                    <img src="images/kitchen1.webp" alt="Kitchen" loading="lazy">
                 </div>
                 <span class="category-name">Kitchen</span>
             </a>
             
+            <!-- 2. Decor -->
             <a href="category-decor.html" class="category-card">
                 <div class="category-img-wrapper">
-                    <img src="images/decor.jpg" alt="Decor" loading="lazy">
+                    <img src="images/decor1.webp" alt="Decor" loading="lazy">
                 </div>
                 <span class="category-name">Decor</span>
             </a>
             
+            <!-- 3. Smart Tech -->
             <a href="category-smart-tech.html" class="category-card">
                 <div class="category-img-wrapper">
-                    <img src="images/smart-tech.jpg" alt="Smart Tech" loading="lazy">
+                    <img src="images/smart1.webp" alt="Smart Tech" loading="lazy">
                 </div>
                 <span class="category-name">Smart Tech</span>
             </a>
             
+            <!-- 4. Bedrooms -->
             <a href="category-bedrooms.html" class="category-card">
                 <div class="category-img-wrapper">
-                    <img src="images/bedrooms.jpg" alt="Bedrooms" loading="lazy">
+                    <img src="images/beedroom1.webp" alt="Bedrooms" loading="lazy">
                 </div>
                 <span class="category-name">Bedrooms</span>
             </a>
             
+            <!-- 5. Office -->
             <a href="category-office.html" class="category-card">
                 <div class="category-img-wrapper">
-                    <img src="images/office.jpg" alt="Office" loading="lazy">
+                    <img src="images/office1.webp" alt="Office" loading="lazy">
                 </div>
                 <span class="category-name">Office</span>
             </a>
             
+            <!-- 6. Bathroom (Placeholder ready for next image) -->
             <a href="category-bathroom.html" class="category-card">
                 <div class="category-img-wrapper">
-                    <img src="images/bathroom.jpg" alt="Bathroom" loading="lazy">
+                    <img src="images/bathroom1.webp" alt="Bathroom" loading="lazy">
                 </div>
                 <span class="category-name">Bathroom</span>
             </a>
             
+            <!-- 7. Patio (Placeholder ready for next image) -->
             <a href="category-patio.html" class="category-card">
                 <div class="category-img-wrapper">
-                    <img src="images/patio.jpg" alt="Patio" loading="lazy">
+                    <img src="images/patio1.webp" alt="Patio" loading="lazy">
                 </div>
                 <span class="category-name">Patio</span>
             </a>
             
+            <!-- 8. Pet Care (Placeholder ready for next image) -->
             <a href="category-pet-care.html" class="category-card">
                 <div class="category-img-wrapper">
-                    <img src="images/pet-care.jpg" alt="Pet Care" loading="lazy">
+                    <img src="images/pet1.webp" alt="Pet Care" loading="lazy">
                 </div>
                 <span class="category-name">Pet Care</span>
             </a>
