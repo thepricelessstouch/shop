@@ -256,7 +256,7 @@
 
         .hero-section {
             width: 100%;
-            background-color: #000;
+            background-color: var(--bg-color);
         }
 
         .hero-section img {
@@ -265,6 +265,7 @@
             max-height: 350px;
             object-fit: cover;
             display: block;
+            transition: opacity 0.15s ease-in-out;
         }
 
         .content-container {
@@ -280,7 +281,6 @@
             width: 100%;
         }
 
-        /* تم إعادة الخط ليكون خفيفاً وأنيقاً وراقياً كما طلبت */
         .main-title {
             font-size: 25px;
             font-weight: 400;
@@ -418,8 +418,9 @@
         </div>
     </div>
 
+    <!-- تم تحديث الصورة الترحيبية لتتغير فوراً حسب المود -->
     <div class="hero-section">
-        <img src="images/hero.JPG" alt="Hero Name" width="1200" height="600" fetchpriority="high">
+        <img id="hero-img" src="images/dark.webp" alt="Silk Curtain Welcome" width="1200" height="840" fetchpriority="high">
     </div>
 
     <div class="content-container">
@@ -453,6 +454,7 @@
         const themeToggleBtn = document.getElementById('theme-toggle');
         const themeIconSpan = document.getElementById('theme-icon');
         const bodyElement = document.body;
+        const heroImg = document.getElementById('hero-img');
 
         const sunSvg = `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`;
         const moonSvg = `<svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/></svg>`;
@@ -461,10 +463,12 @@
             if (isLight) {
                 bodyElement.classList.add('light-mode');
                 themeIconSpan.innerHTML = moonSvg;
+                heroImg.src = 'images/light.webp';
                 localStorage.setItem('theme', 'light');
             } else {
                 bodyElement.classList.remove('light-mode');
                 themeIconSpan.innerHTML = sunSvg;
+                heroImg.src = 'images/dark.webp';
                 localStorage.setItem('theme', 'dark');
             }
         }
